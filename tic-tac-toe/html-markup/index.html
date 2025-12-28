@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic-Tac-Toe</title>
+    <link rel="icon" type="image/png" href="./images/game-logo.png" > 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" >
+  </head>
+  <body>
+    <header>
+      <img src="./images/game-logo.png">
+      <h1>Tic-Tac-Toe</h1>
+    </header>
+    <main>
+      <section class="game-board">
+        <div class="player-details-container">
+          <div class="player-details active">
+            <p class="player-name">PLAYER 1</p>
+            <p class="player-symbol">X</p>
+            <button>Edit</button>
+          </div>
+          <div class="player-details">
+            <input type="text" value="PLAYER 2" />
+            <p class="player-symbol">O</p>
+            <button>Save</button>
+          </div>
+        </div>
+        <div class="play-buttons">
+          <button>X</button>
+          <button>O</button>
+          <button>X</button>
+          <button>X</button>
+          <button>O</button>
+          <button>X</button>
+          <button>O</button>
+          <button>O</button>
+          <button>X</button>
+        </div>
+        <div class="game-result">
+          <h2>Game Over!</h2>
+          <p>Player 1 won!</p>
+          <button>Rematch!</button>
+        </div>
+      </section>
+      <section class="game-moves">
+        <ul>
+          <li>X selected 2,0</li>
+          <li>O selected 1,0</li>
+          <li>X selected 1,1</li>
+          <li>O selected 1,2</li>
+          <li>X selected 0,2</li>
+          <li>O selected 0,1</li>
+          <li>X selected 0,0</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

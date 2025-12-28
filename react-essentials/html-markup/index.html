@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>React Essentials</title>
+      <link rel="icon" type="image/svg+xml" href="./images/32px-React-icon.svg.png" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="styles.css" >
+  </head>
+  <body>
+    <header class="header">
+      <img src="images/react-core-concepts.png" />
+      <h1>React Essentials</h1>
+      <p>Crucial React concepts you will need for almost any app you are going to build!</p>
+    </header>
+    <main>
+      <section class="core-concepts">
+        <h2>Core Concepts</h2>
+        <ul>
+          <li>
+            <img src="images/components.png" />
+            <h3>Components</h3>
+            <p>
+              The core UI building block - compose the user interface by combining multiple components.
+            </p>
+          </li>
+          <li>
+            <img src="images/jsx-ui.png" />
+            <h3>JSX</h3>
+            <p>
+              Return (potentially dynamic) HTML(ish) code to define the actual markup that will be rendered.
+            </p>
+          </li>
+          <li>
+            <img src="images/config.png" />
+            <h3>Props</h3>
+            <p>
+              Make components configurable (and therefore reusable) by passing input data to them.
+            </p>
+          </li>
+          <li>
+            <img src="images/state-mgmt.png" />
+            <h3>State</h3>
+            <p>
+              React-managed data which, when changed, causes the component to re-render & the UI to update.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="examples">
+        <h2>Examples</h2>
+        <menu>
+          <button class="active">Components</button>
+          <button>JSX</button>
+          <button>Props</button>
+          <button>State</button>
+        </menu>
+        <div class="tab-content">
+          <h3>Components</h3>
+          <p>Components are the building blocks of React applications. A component is a self-contained module (HTML + optional CSS + JS) that renders some output.</p>
+<pre><code>
+function Welcome() {
+  return &lt;h1&gt;Hello, World!&lt;/h1&gt;; 
+}
+</code></pre>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
