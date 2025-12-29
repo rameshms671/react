@@ -12,6 +12,8 @@ function App() {
     duration: 10
   });
 
+  const isValidInput = Object.values(userInput).every(value => value >= 0);
+
   function handleChange(inputProperty, value){
     setUserInput((prevUserInput) => (
       {
@@ -25,7 +27,8 @@ function App() {
     <>
       <main>
         <UserInput userInput={userInput} handleChange={handleChange} />
-        <Returns userInput={userInput} />
+        { !isValidInput && <p className="error-text">Please enter valid (non-negative) values.</p> }
+        { isValidInput && <Returns userInput={userInput} /> }
       </main>
     </>
   )
