@@ -9,7 +9,7 @@ export default function Header(){
   }
 
   return (
-    <header class="header">
+    <header className="header">
       <img src={coreConceptsImage} />
       <h1>React Essentials</h1>
       <p>{reactDescriptions[getRandomInt(2)]} React concepts you will need for almost any app you are going to build!</p>
