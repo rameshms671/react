@@ -5,7 +5,7 @@ export default function GamePlay({ gameBoard, handlePlayButtonClick }) {
       {
         gameBoard.map((gameRow, row) => 
           gameRow.map((gameCol, col) => 
-             <button onClick={() => handlePlayButtonClick(row, col)} disabled={gameBoard[row][col] !== ''}>
+             <button key={`${row}-${col}`} onClick={() => handlePlayButtonClick(row, col)} disabled={gameBoard[row][col] !== ''}>
               { 
                 gameBoard[row][col]
               }

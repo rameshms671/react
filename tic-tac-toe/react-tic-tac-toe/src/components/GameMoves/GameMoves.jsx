@@ -4,7 +4,7 @@ export default function GameMoves({ gameState }) {
       <ul>
       {
         [...gameState].map((move, index) => (
-          <li key={index}>{move.player} selected {move.row},{move.col}</li>
+          <li key={`${move.row}-${move.col}`}>{move.player} selected {move.row},{move.col}</li>
         ))
       }
       </ul>
