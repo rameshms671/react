@@ -1,3 +1,5 @@
+import Player from './components/Player/Player'
+import Challenge from './components/Challenge/Challenge'
 import './App.css'
 
 function App() {
@@ -8,38 +10,12 @@ function App() {
           <h1>THE <em>ALMOST</em> FINAL COUNTDOWN</h1>
           <h2>Stop the timer once you estimate that time is (almost) up</h2>
         </header>
-        <div id="player">
-          <h2>Welcome unknown entity</h2>
-          <div class="player-input-group">
-            <input type='text' />
-            <button>Set Name</button>
-          </div>
-        </div>
+        <Player />
         <section id="challenges">
-          <div class="challenge">
-            <h2>easy</h2>
-            <p class="time">1 second</p>
-            <button>Start Challenge</button>
-            <p>Timer inactive</p>
-          </div>
-          <div class="challenge">
-            <h2>Not easy</h2>
-            <p class="time">5 seconds</p>
-            <button>Start Challenge</button>
-            <p>Timer inactive</p>
-          </div>
-          <div class="challenge">
-            <h2>Getting tough</h2>
-            <p class="time">10 seconds</p>
-            <button>Start Challenge</button>
-            <p>Timer inactive</p>
-          </div>
-          <div class="challenge">
-            <h2>Pros only</h2>
-            <p class="time">15 seconds</p>
-            <button>Start Challenge</button>
-            <p>Timer inactive</p>
-          </div>
+          <Challenge title="easy" targetTime={1}/>
+          <Challenge title="not easy" targetTime={5}/>
+          <Challenge title="getting tough" targetTime={10}/>
+          <Challenge title="pros only" targetTime={15}/>
         </section>
       </div>
     </>

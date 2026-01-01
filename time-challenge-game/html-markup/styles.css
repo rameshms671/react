@@ -52,6 +52,8 @@ body {
   background-color: #192f2b;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+  color: #d1f0ec;
+  font: 1rem;
 }
 
 .player-input-group button {

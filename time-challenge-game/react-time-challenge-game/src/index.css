@@ -52,6 +52,8 @@ body {
   background-color: #192f2b;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+  color: #d1f0ec;
+  font: 1rem;
 }
 
 .player-input-group button {
@@ -94,7 +96,7 @@ body {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-} 
+}
 
 .challenge .time {
   border: 1px solid #46cebe;
@@ -116,5 +118,52 @@ body {
 }
 
 .challenge button:hover {
+  background: #051715;
+}
+
+.result-modal::backdrop {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.result-modal {
+  border: none;
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: #d7fcf8;
+  text-align: left;
+}
+
+.result-modal h2 {
+  font-family: 'Handjet', monospace;
+  margin: 0 0 0.25rem 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.result-modal p {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.result-modal p strong {
+  color: #10655b;
+}
+
+.result-modal form {
+  text-align: right;
+}
+
+.result-modal button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #12352f;
+  color: #edfcfa;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.result-modal button:hover {
   background: #051715;
 }
