@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ShopEasy - Your Online Store</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .app-container {
+        width: 500px;
+        background-color: rgb(217, 221, 225);
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .login-form-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      .login-form-container input {
+        padding: 10px 15px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        width: 300px;
+      }
+
+      .action-button {
+        background-color: rgb(0, 123, 255);
+        color: white;
+        font-size: 14px;
+        padding: 10px 15px;
+        border-style: none;
+        border-radius: 5px;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: all 0.1s ease;
+      }
+
+      .action-button:hover {
+        background-color: rgb(0, 105, 217);
+      }
+
+      .action-button:active {
+        transform: scale(0.95);
+        background-color: rgb(0, 86, 179);
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .password-action-button {
+        margin-left: 10px;
+      }
+
+      .current-time-container {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script src="https://unpkg.com/supersimpledev@8.6.4/dayjs.js"></script>
+    <!-- Main -->
+    <script type="text/babel">
+
+
+      function App(){
+        const [currentTime, setCurrentTime] = React.useState(dayjs().format('HH:mm:ss'));
+        const [showPassword, setShowPassword] = React.useState(false);
+        
+        React.useEffect(() => {
+          setInterval(
+            () => setCurrentTime(dayjs().format('HH:mm:ss')),
+            1000
+          )
+        })
+        
+        return (
+            <div className="app-container">
+              <h1 className="login-header">Hello, welcome to my website</h1>
+              <div className="login-form-container">
+                <input type="text" placeholder="Email" />
+                <div className="password-input-container">
+                  <input 
+                    type={showPassword ? "text" : "password"} 
+                    placeholder="Password" />
+                  <button 
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="action-button password-action-button">
+                    {showPassword ? "Show" : "Hide"}
+                  </button>
+                </div>
+              </div>
+              <div className="login-form-button-container">
+                <button className="action-button">Login</button>
+                <button className="action-button">Sign Up</button>
+              </div>
+              <div className="current-time-container">
+                Current time: {currentTime}
+              </div>
+            </div>
+        );
+      }
+
+
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>
