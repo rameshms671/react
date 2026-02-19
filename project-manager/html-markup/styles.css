@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+  margin: 0;
+  background-color: rgb(250 250 249);
+}
+
+main {
+  display: flex;
+  margin: 2rem 0rem;
+  gap: 2rem;
+  height: calc(100vh - 4rem);
+}
+
+aside {
+  width: 18rem;
+  background-color: rgb(28 25 23);
+  color: rgb(250 250 249);
+  padding: 4rem 2rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+aside h2 {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+aside button {
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  color: rgb(168 162 158);
+  background-color: rgb(68 64 60);
+  cursor: pointer;
+}
+
+aside button:hover {
+  background-color: rgb(87 83 78);
+  color: rgb(245 245 244)
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  overflow-y: auto;
+  height: 80%;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+aside ul:hover {
+  scrollbar-color: rgb(87 83 78) rgb(41 37 36);
+}
+
+aside ul li {
+  padding: 0;
+  cursor: pointer;
+}
+
+aside ul li button {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 0px;
+  font-size: 0.9rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+aside ul li button:hover {
+  color: rgb(231 229 228);
+  background-color: rgb(41 37 36);
+}
+
+#create-project-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+#create-project-section img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+}
+
+#create-project-section h2 {
+  color: rgb(120 113 108);
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+#create-project-section p {
+  color: rgb(168 162 158);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+#create-project-section button {
+  padding: 0.7rem 1.4rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.9rem;
+  color: rgb(168 162 158);
+  background-color: rgb(68 64 60);
+  cursor: pointer;
+}
+
+#create-project-section button:hover {
+  background-color: rgb(87 83 78);
+  color: rgb(245 245 244);
+}
+
+#create-project-form {
+  width: 35rem;
+  margin-top: 5rem;
+}
+
+#create-project-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container {
+  text-align: right;
+}
+
+.button-container .save-button {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.9rem;
+  color: rgb(250 250 249);
+  background-color: rgb(41 37 36);
+  border-radius: 5px;
+}
+
+.button-container .cancel-button {
+  font-size: 0.9rem;
+  background-color: transparent;
+  border: none;
+}
+
+#create-project-form form label {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: rgb(120 113 108);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+#create-project-form form input,textarea {
+  background-color: rgb(231 229 228);
+  color: rgb(87 83 78);
+  height: 2rem;
+  border: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-color: rgb(214 211 209);
+  outline: none;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 0.125rem;
+}
+#create-project-form form textarea{
+  resize: vertical;
+  min-height: 5rem;
+}
+
+#create-project-form form input:focus {
+  outline-offset: 2px;
+  border-color: rgb(87 83 78);
+}
+
+#project-details {
+  margin-top: 4rem;
+  width: 35rem;
+}
+
+#project-details .project-info {
+  border-bottom: 2px solid rgb(214 211 209);
+}
+
+#project-details .project-info .project-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#project-details .project-info .project-title h2 {
+  font-size: 1.9rem;
+  color: rgb(87 83 78);
+  margin: 0;
+}
+
+#project-details .project-info .project-title button {
+  color: rgb(87 83 78);
+  background-color: transparent;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+#project-details .project-info .project-title button:hover {
+  color: rgb(12 10 9);
+}
+
+#project-details .project-info .date{
+  color: rgb(168 162 158);
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+#project-details .project-info .description {
+  color: rgb(87 83 78);
+}
+
+#project-details .project-tasks {
+
+}
+
+#project-details .project-tasks h3 {
+  color: rgb(68 64 60);
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+#project-details .project-tasks input {
+  background-color: rgb(231 229 228);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  width: 16rem;
+}
+
+#project-details .project-tasks .add-task {
+  margin-left: 0.5rem;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  color: rgb(68 64 60);
+  cursor: pointer;
+}
+
+#project-details .project-tasks .add-task:hover {
+  color: rgb(12 10 9);
+}
+
+#project-details .project-tasks ul {
+  background-color: rgb(245 245 244);
+  list-style: none;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  border-radius: 5px;
+}
+
+#project-details .project-tasks ul li {
+  background-color: rgb(245 245 244);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#project-details .project-tasks ul li button {
+  background-color: transparent;
+  border: none;
+  margin: 0.9rem 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+#project-details .project-tasks ul li button:hover {
+  color: rgb(239 68 68);
+}
